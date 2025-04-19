@@ -7,5 +7,6 @@
   "outputDirectory": ".next",
   "public": true,
   "cleanUrls": true,
-  "regions": ["iad1"]
+  "regions": ["iad1"],
+  "root": "."
 } 
