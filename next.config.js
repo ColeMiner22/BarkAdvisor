@@ -9,7 +9,15 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   distDir: '.next',
-  cleanDistDir: true
+  cleanDistDir: true,
+  webpack: (config, { isServer }) => {
+    // Add custom webpack config for module resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': './src'
+    };
+    return config;
+  }
 }
 
 module.exports = nextConfig 
